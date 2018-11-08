@@ -1,0 +1,25 @@
+type User{
+    id: Int!
+    name: String!
+}
+
+type Wallet{
+    id: Int!
+    balance: Int!
+}
+
+#type Kafka{
+#    name: String
+#    balance: Int
+#}
+
+type Query {
+    fetchAllUsers: [User]
+    fetchAllWallets: [Wallet]
+#    kafkaListener: [Kafka]
+}
+
+type Mutation {
+    create(name: String!): User
+#    create(balance: Int!, user: {id:Int, name: String})
+}
